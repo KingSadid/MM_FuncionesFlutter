@@ -8,20 +8,20 @@ class Suma extends StatefulWidget {
 }
 
 class _SumaState extends State<Suma> {
-  final int a = 5; 
+  final int a = 5;
 
-  int _resultado = 90; 
+  int _resultado = 90;
 
   void sumar() {
     setState(() {
       _resultado += a;
     });
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF333333), 
+      backgroundColor: const Color(0xFF333333),
       appBar: AppBar(
         title: const Text('FuncionesFlutter'),
         backgroundColor: Colors.black87,
@@ -41,28 +41,36 @@ class _SumaState extends State<Suma> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center, // Centrado
                       children: [
-                        Container(width: 25, height: 25, color: Colors.green[200]),
+                        Container(
+                          width: 25,
+                          height: 25,
+                          color: Colors.green[200],
+                        ),
                         const SizedBox(width: 8),
                         Container(width: 35, height: 6, color: Colors.orange),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    
+
                     Image.network(
                       'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
-                      width: 180, 
-                      height: 180, 
+                      width: 180,
+                      height: 180,
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) {
                         return Container(
                           width: 180,
                           height: 180,
                           color: Colors.grey[800],
-                          child: const Icon(Icons.broken_image, color: Colors.white54, size: 50),
+                          child: const Icon(
+                            Icons.broken_image,
+                            color: Colors.white54,
+                            size: 50,
+                          ),
                         );
                       },
                     ),
-                    
+
                     const SizedBox(height: 16),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -84,25 +92,33 @@ class _SumaState extends State<Suma> {
                   ],
                 ),
               ),
-              const SizedBox(height: 80), 
-              
+              const SizedBox(height: 80),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
                     onPressed: sumar,
                     icon: const Icon(Icons.star, size: 45, color: Colors.amber),
-                    tooltip: 'Sumar 5', 
+                    tooltip: 'Sumar 5',
                   ),
                   const SizedBox(width: 30),
                   IconButton(
-                    onPressed: () {}, 
-                    icon: const Icon(Icons.camera_alt, size: 45, color: Colors.white54),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.camera_alt,
+                      size: 45,
+                      color: Colors.white54,
+                    ),
                   ),
                   const SizedBox(width: 30),
                   IconButton(
-                    onPressed: () {}, 
-                    icon: const Icon(Icons.favorite, size: 45, color: Colors.white54),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.favorite,
+                      size: 45,
+                      color: Colors.white54,
+                    ),
                   ),
                 ],
               ),
