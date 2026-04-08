@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AppSadid',
-      home: Suma(), 
+      home: Suma(),
     );
   }
 }
